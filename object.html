@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let she = "precious";
+  function callName() {
+    let she = "Daniel";
+    console.log(she);
+  }
+  callName();
+
+  //Object-an object is a storage with key and value pair. each key and value pair is separated by a comma.
+  //for example;
+  const person = { name: "oyin", class: "javascript" };
+  console.log(person);
+  console.log(person.name); //this is the most popular way to access a value.
+  //or
+  person["class"];
+  console.log(person["class"]);
+
+  let arr = [{ name: "david" }, [], [undefined, null], { arr: ["hey", "hi"] }];
+  console.log(arr[3].arr[1]);
+
+  person.callName = function () {
+    console.log("hi precious");
+  };
+  person.callName();
+
+  const miss = {
+    name: "deola",
+    dept: "javascript",
+  };
+
+  const users = {
+    Alex: {
+      email: "alex@alex.com",
+      skills: ["HTML", "CSS", "JavaScript"],
+      age: 20,
+      isLoggedIn: false,
+      points: 30,
+    },
+    Asab: {
+      email: "asab@asab.com",
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Redux",
+        "MongoDB",
+        "Express",
+        "React",
+        "Node",
+      ],
+      age: 25,
+      isLoggedIn: false,
+      points: 50,
+    },
+    Brook: {
+      email: "daniel@daniel.com",
+      skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+      age: 30,
+      isLoggedIn: true,
+      points: 50,
+    },
+    Daniel: {
+      email: "daniel@alex.com",
+      skills: ["HTML", "CSS", "JavaScript", "Python"],
+      age: 20,
+      isLoggedIn: false,
+      points: 40,
+    },
+    John: {
+      email: "john@john.com",
+      skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+      age: 20,
+      isLoggedIn: true,
+      points: 50,
+    },
+    Thomas: {
+      email: "thomas@thomas.com",
+      skills: ["HTML", "CSS", "JavaScript", "React"],
+      age: 20,
+      isLoggedIn: false,
+      points: 40,
+    },
+    Paul: {
+      email: "paul@paul.com",
+      skills: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "MongoDB",
+        "Express",
+        "React",
+        "Node",
+      ],
+      age: 20,
+      isLoggedIn: false,
+      points: 40,
+    },
+  };
+
+  let num = [];
+  for (const key in users) {
+    if (users[key].isLoggedIn === true) {
+      num.push(key);
+    }
+  }
+  console.log(num);
+
+  let numbers = 0;
+  for (const key in users) {
+    if (users[key].points >= 50) {
+      numbers++;
+    }
+  }
+
+  console.log(numbers);
+</script>
